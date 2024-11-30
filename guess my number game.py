@@ -1,10 +1,14 @@
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+import random
 
-print('Hello, welocme to my guessing game')
 
-ready_to_play = input('Press y to play and n to exit' ' ')
+number = random.randint(1, 100)
+guess = 0
 
-if ready_to_play == 'n':
-    print('Goodbye')
-else:
-    print('lets play')
+while guess != number:
+    guess = int(input("Enter Guess: "))
+    if (guess < number):
+        print("Guess higher!")
+    elif (guess > number):
+            print("Guess lower!")
+    else:
+        print("Youve Won!")
